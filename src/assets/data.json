@@ -1,0 +1,24 @@
+{
+  "id": "1",
+  "quizName": "My Quiz",
+  "questions": [
+    {
+      "id": "1",
+      "title": "What is the capital of Austria?",
+      "a1": "Berlin",
+      "a2": "Madrid",
+      "a3": "Paris",
+      "a4": "Vienna",
+      "correct": 4
+    },
+    {
+      "id": "bfcbe2fb-5e18-4064-8b03-2fec965e6159",
+      "title": "was ist 2+8 ?",
+      "a1": "1",
+      "a2": "3",
+      "a3": "4",
+      "a4": "10",
+      "correct": 4
+    }
+  ]
+}

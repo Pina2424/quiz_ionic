@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Quiz Questions</ion-title>
+    <ion-buttons slot="end">
+      <ion-button icon-only (click)="show('0')">
+      <ion-icon name="add-circle"></ion-icon>
+    </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    
+    @for (q of data.currentQuiz.questions; track q.id) {
+      <ion-item-sliding>
+        <ion-item (click)="show(q.id)"> 
+          {{q.titel}}</ion-item>
+       
+      <ion-item-options side="end"> 
+        <ion-item-option color="danger" (click)="delete(q)">
+          Delete
+        </ion-item-option>
+      </ion-item-options> 
+   </ion-item-sliding>
+  }
+
+  </ion-list>
+</ion-content>

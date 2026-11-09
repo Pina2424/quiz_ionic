@@ -1,2 +1,45 @@
 // For information on how to create your own theme, please refer to:
 // https://ionicframework.com/docs/theming/
+:root {
+  /* Основной акцентный цвет (кнопки, активные иконки, акценты) */
+  --ion-color-primary: #5c6ac4;
+  --ion-color-primary-rgb: 92, 106, 196;
+  --ion-color-primary-contrast: #ffffff; /* Цвет текста на кнопке */
+  --ion-color-primary-shade: #515da6;    /* Цвет при наведении/нажатии */
+  --ion-color-primary-tint: #6c79ca;
+
+  /* Вторичный цвет */
+  --ion-color-secondary: #f4a261;
+  --ion-color-secondary-contrast: #000000;
+
+  /* Фоновые цвета всего приложения */
+  --ion-background-color: #f8f9fa;
+  --ion-background-color-rgb: 248, 249, 250;
+  --ion-text-color: #1f1683;
+  --ion-background-color: #8093ba;
+  
+
+}
+ion-button {
+  --border-radius: 12px;
+  font-weight: 600;
+  text-transform: none; 
+  letter-spacing: 0;
+}
+
+* {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+
+h1, h2, h3, ion-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em; 
+}
+
+
+ion-button, ion-tab-button {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+}
