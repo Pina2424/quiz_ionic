@@ -11,16 +11,22 @@ import { NgClass } from '../../../../node_modules/@angular/common/types/_common_
   styleUrls: ['home.page.scss'],
   imports: [IonButton, IonHeader, IonToolbar, IonTitle, IonContent],
 })
-export class HomePage {
 
+export class HomePage {
+  public data = inject(Data);
   private router = inject(Router);
-  public data = inject(Data); //// new way to inject dependencies in Angular 16 and later
+
   constructor() {
-    console.log('this.data.currentQuiz.quizName')
+    console.log(this.data.currentQuiz.quizName);
   }
 
   showQuestions() {
-    // Implement the logic to show questions
-    this.router.navigate(['/quiesten-list']); // Navigate to the questions page
+    // Переход к списку вопросов
+    this.router.navigate(['/quiesten-list']);
+  }
+
+  startQuiz() {
+    console.log('Кнопка нажата, переходим на /quiz');
+    this.router.navigateByUrl('/quiz');
   }
 }

@@ -6,25 +6,26 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-
-<ion-button expand="block"color="primary" routerLink="/question">
-    Start Quiz
- Lala 
-</ion-button>
-  <div id="container">
-    
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content [fullscreen]="true" class="ion-padding">
+  
+  <div class="ion-text-center ion-padding">
+    <h2>Willkommen zum Quiz!</h2>
+    <p>Anzahl Fragen: {{ data.currentQuiz.questions.length }}</p>
   </div>
-  <ion-content [fullscreen]="true">
-    <p>Aktuelle Quiz: {{data.currentQuiz.quizName}} Anzahl Fragen: {{data.currentQuiz.questions.length}} </p>
-    <ion-button expand="block" color="secondary" (click)="showQuestions()">
-  Показать вопросы
+
+  <!-- Кнопка запуска квиза через метод в TypeScript -->
+<ion-button expand="block" color="primary" (click)="startQuiz()" class="ion-margin-top">
+  🚀 Start Quiz
 </ion-button>
-   
-   <ion-button expand="block" color="tertiary" (click)="data.loadJSON()">
-     Load Quiz
-   </ion-button>
-  </ion-content>
+
+  <!-- Кнопка перехода к списку вопросов (если вы её делали с учителем) -->
+  <ion-button expand="block" color="secondary" routerLink="/quiesten-list" class="ion-margin-top">
+    📝 Fragen verwalten (Liste)
+  </ion-button>
+
+  <!-- Кнопка загрузки из JSON (если нужно подгружать с сервера) -->
+  <ion-button expand="block" color="tertiary" (click)="data.loadJSON()" class="ion-margin-top">
+    📥 Load Quiz from Server
+  </ion-button>
+
 </ion-content>

@@ -1,0 +1,28 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <h2>Punkte: {{ score }}</h2>
+    <!-- Счетчик текущего вопроса -->
+    <p style="font-weight: bold; color: var(--ion-color-medium);">
+      Frage {{ currentIndex + 1 }} von {{ shuffledQuestions.length }}
+    </p>
+  </div>
+
+  @if (currentQuestion) {
+    <div>
+      <h3>{{ currentQuestion.titel }}</h3>
+
+      @for (choice of currentChoices; track choice.originalIndex) {
+        <ion-button 
+          expand="block" 
+          fill="outline" 
+          class="ion-margin-top" 
+          (click)="answer(choice.originalIndex)">
+          {{ choice.text }}
+        </ion-button>
+      }
+    </div>
+  }
+
+</ion-content>
+

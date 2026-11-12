@@ -15,17 +15,27 @@ export class Data {
     }
 
     constructor () {
-        /*this.currentQuiz.questions.push({
-            id: '1',
-            titel: 'What is the capital of France?',
-            a1: 'Berlin',   
-            a2: 'Madrid',
-            a3: 'Paris',
-            a4: 'Rome',
-            correct: 3
-        });  */
-        this.loadQuiz();
-        console.log();
+        this.currentQuiz.questions = [
+            {
+                id: '1',
+                titel: 'What is a promise?',
+                a1: 'a nicely phrased lie',
+                a2: 'a placeholder for a future value',
+                a3: 'a callback function',
+                a4: 'a special form of array',
+                correct: 2
+            },
+            {
+                id: '2',
+                titel: 'What does CSS stand for?',
+                a1: 'Cascading Style Sheets',
+                a2: 'Creative Style System',
+                a3: 'Computer Style Sheets',
+                a4: 'Colorful Style Sheets',
+                correct: 1
+            }
+        ];
+   
 }
 
 async loadJSON(){
